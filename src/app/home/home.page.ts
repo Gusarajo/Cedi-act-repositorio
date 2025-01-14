@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  nombre = new FormControl('');
+  constructor() { }
 
 }
