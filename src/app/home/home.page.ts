@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class HomePage {
 
+  Acepto = new FormControl('');
   nombre = new FormControl('');
   Edad = new FormControl('');
   email = new FormControl('');
@@ -17,13 +18,14 @@ export class HomePage {
   constructor() { }
   buttonclick() {
 
-    this.Name.setValue(this.nombre.value);
-    this.Age.setValue(this.Edad.value);
-    this.correo.setValue(this.email.value);
-    this.nombre.setValue('');
-    this.Edad.setValue('');
-    this.email.setValue('');
-
+    if (this.Acepto.value) {
+      this.Name.setValue(this.nombre.value);
+      this.Age.setValue(this.Edad.value);
+      this.correo.setValue(this.email.value);
+      this.nombre.setValue('');
+      this.Edad.setValue('');
+      this.email.setValue('');
+    }
 
   }
 }
